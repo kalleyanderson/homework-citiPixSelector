@@ -1,7 +1,6 @@
 
 //create array with each city
-var cities = ['NYC', 'SF' , 'LA' , 'ATX' , 'SYD'] 
-
+var cities = ['NYC', 'SF' , 'LA' , 'ATX' , 'SYD'];
 
 //show each item in the array when the 'select' is clicked
 for (var i=0;i<cities.length;i++){
@@ -9,13 +8,13 @@ for (var i=0;i<cities.length;i++){
 }
 
 
+//listen for city selection
+$('option').select(function () {
+	debugger
+	//when item in drop down is clicked, get value and set as variable
+	var citySelection = $('select').val();
 
-//when item in drop down is clicked, get value and set as variable
-var citySelection = $('select').val();
-
-
-//if new city is selected, change the background
-$('select').change(function () {
+	console.log(citySelection)
 
 	if (citySelection === 'NYC') {
 		$('body').attr('class', 'nyc')
