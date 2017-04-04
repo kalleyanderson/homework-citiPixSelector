@@ -9,12 +9,9 @@ for (var i=0;i<cities.length;i++){
 
 
 //listen for city selection
-$('option').select(function () {
-	debugger
+$('select').change(function () {
 	//when item in drop down is clicked, get value and set as variable
 	var citySelection = $('select').val();
-
-	console.log(citySelection)
 
 	if (citySelection === 'NYC') {
 		$('body').attr('class', 'nyc')
